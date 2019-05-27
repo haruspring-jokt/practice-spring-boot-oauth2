@@ -1,17 +1,18 @@
 server:
   port: 8080
   servlet:
-    context-path: /demo
-security:
+    context-path: /
+  output:
+    ansi:
+      enabled: ALWAYS
   oauth2:
     client:
-      client-id: 43cc3d7d6880fcacfdbe
-      client-secret: 578b544d2f81c8f406bf7670d0a388380db54d91
-      access-token-uri: https://github.com/login/oauth/access_token # (2)
-      user-authorization-uri: https://github.com/login/oauth/authorize
-      client-authentication-scheme: form # (3)
+      client-id: '198862669795.646621987428'
+      client-secret: 'f97205a076c910e5eb9bbb7b474964a7'
+      access-token-uri: 'https://slack.com/api/oauth.access'
+      user-authorization-uri: 'https://slack.com/oauth/authorize'
+      client-authentication-scheme: 'query'
+      scope: 'identify'
+      tokenName: 'token'
     resource:
-      user-info-uri: https://api.github.com/user # (4)
-      prefer-token-info: false
-    sso:
-      login-path: /login # (5)
+      user-info-uri: 'https://slack.com/api/auth.test'

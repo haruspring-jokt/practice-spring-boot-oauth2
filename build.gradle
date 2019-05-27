@@ -31,5 +31,8 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	// https://mvnrepository.com/artifact/org.springframework.security.oauth.boot/spring-security-oauth2-autoconfigure
 	compile group: 'org.springframework.security.oauth.boot', name: 'spring-security-oauth2-autoconfigure', version: '2.1.5.RELEASE'
+}
 
+bootRun {
+	jvmArgs = ['-Dspring.output.ansi.enabled=always'] //コンソールに色を付ける
 }
