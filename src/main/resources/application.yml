@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+security:
+  oauth2:
+    client:
+      client-id: 43cc3d7d6880fcacfdbe
+      client-secret: 578b544d2f81c8f406bf7670d0a388380db54d91
+      access-token-uri: https://github.com/login/oauth/access_token # (2)
+      user-authorization-uri: https://github.com/login/oauth/authorize
+      client-authentication-scheme: form # (3)
+    resource:
+      user-info-uri: https://api.github.com/user # (4)
+      prefer-token-info: false
+    sso:
+      login-path: /login # (5)
